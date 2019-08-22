@@ -1,0 +1,6 @@
+number_adder/target
+number_adder/**/*.rs.bk
+number_adder/Cargo.lock
+
+wasm-example/.next
+wasm-example/node_modules
