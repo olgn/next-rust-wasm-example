@@ -10,6 +10,9 @@
     "react-dom": "^16.9.0"
   },
   "scripts": {
+    "build-rust": "cd number_adder && cargo +nightly build --target wasm32-unknown-unknown --release",
+    "copy-wasm-to-next": "cp number_adder/target/wasm32-unknown-unknown/release/number_adder.wasm static",
+    "up": "yarn && yarn build-rust && yarn copy-wasm-to-next",
     "dev": "next",
     "build": "next build",
     "start": "next start"

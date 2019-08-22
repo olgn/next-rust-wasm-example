@@ -1,0 +1,43 @@
+Arguments: 
+  /Users/tealhobson-lowther/.nvm/versions/node/v11.0.0/bin/node /usr/local/Cellar/yarn/1.15.2/libexec/bin/yarn.js init
+
+PATH: 
+  /usr/local/opt/gettext/bin:/Users/tealhobson-lowther/.cargo/bin:/Users/tealhobson-lowther/.nvm/versions/node/v11.0.0/bin:/Users/tealhobson-lowther/google-cloud-sdk/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/home/teal/Documents/Muse:/home/teal/Documents/Muse
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  11.0.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/usr/local/Cellar/yarn/1.15.2/libexec/lib/cli.js:125801:13)
+      at Interface.emit (events.js:182:13)
+      at Interface._ttyWrite (readline.js:783:16)
+      at ReadStream.onkeypress (readline.js:168:10)
+      at ReadStream.emit (events.js:182:13)
+      at emitKeys (internal/readline.js:424:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1020:36)
+      at ReadStream.emit (events.js:182:13)
+      at addChunk (_stream_readable.js:283:12)
+
+npm manifest: 
+  {
+    "scripts": {
+      "build-rust": "cd number_adder && cargo +nightly build --target wasm32-unknown-unknown --release",
+      "copy-wasm-to-next": "cp number_adder/target/wasm32-unknown-unknown/release/number_adder.wasm wasm-example/static",
+      "init-next": "cd wasm-example && yarn",
+      "up": "build-rust"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
